@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "lib": ["es2020.string"],
+        "target": "ES5",
+        "downlevelIteration": true,
+        "esModuleInterop": true,
+        "outDir": "build"
+    }
+}
