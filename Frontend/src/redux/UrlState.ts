@@ -46,7 +46,7 @@ export function UrlReducer(currentState = new UrlState(), action: UrlAction): Ur
                 break;
                 
                 case UrlActionType.DeleteUrl:
-                    newState.Url = null;
+                    newState.Url = [];
                     break;
             
 

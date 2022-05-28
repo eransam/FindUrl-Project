@@ -9,8 +9,19 @@ import "./AddUrl.css";
 import { useEffect, useState } from "react";
 import store from "../../../redux/Store";
 import { addUrlAction } from "../../../redux/UrlState";
+import findUrlService from "../../../Services/findUrlService";
 
 function AddUrl(): JSX.Element {
+    useEffect(() => {
+        try {
+            findUrlService.deleteUrl()
+    
+        } catch (error) {
+            
+        }
+      
+    }, []);
+
     const navigate = useNavigate();
 
 

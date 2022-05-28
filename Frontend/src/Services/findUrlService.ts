@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Url } from "url";
 import UrlModel from "../Models/UrlModel";
 import store from "../redux/Store";
+import { DeleteUrlAction } from "../redux/UrlState";
 import config from "../Utils/Config";
 
 class findurlService {
@@ -32,7 +33,16 @@ class findurlService {
             const response = await axios.get<any>(config.findurl + url);
             return console.log("good");
         }
+
+        public async deleteUrl(): Promise<any> {
+
+            store.dispatch(DeleteUrlAction());
+            return
+        }
     }
+
+    
+
 
 
 const thefindurlService = new findurlService();
